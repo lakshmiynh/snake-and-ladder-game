@@ -62,6 +62,10 @@ namespace snakeandladdergame
                             user1dicevalue += 10;
                         }
                     }
+                    if (user1dicevalue == 100)
+                    {
+                        Console.WriteLine("won the game user1 ");
+                    }
 
 
                     user++;
@@ -90,6 +94,10 @@ namespace snakeandladdergame
                         {
                             user2dicevalue += 10;
                         }
+                    }
+                    if (user2dicevalue == 100)
+                    {
+                        Console.WriteLine("won the game user2 ");
                     }
 
 
