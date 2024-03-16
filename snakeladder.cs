@@ -19,6 +19,15 @@ namespace snakeandladdergame
 
             int user1dicevalue = 0; // user1 position 
 
+            int Rolldice()
+            {
+                Random random = new Random();
+                int rolledvalues = random.Next(1, 7);
+                return rolledvalues;
+
+            }
+
+
 
 
         }
