@@ -60,6 +60,7 @@ namespace snakeandladdergame
                         if (user1dicevalue == snake[i])
                         {
                             user1dicevalue -= 10;
+
                         }
                     }
 
@@ -68,6 +69,7 @@ namespace snakeandladdergame
                         if (user1dicevalue == ladder[j])
                         {
                             user1dicevalue += 10;
+                            user1dicevalue = Rolldice();
                         }
                     }
                     if (user1dicevalue == 100)
@@ -112,6 +114,7 @@ namespace snakeandladdergame
                         if (user2dicevalue == ladder[j])
                         {
                             user2dicevalue += 10;
+                            user2dicevalue = Rolldice();
                         }
                     }
                     if (user2dicevalue == 100)
