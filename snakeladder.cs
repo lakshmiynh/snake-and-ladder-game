@@ -66,6 +66,11 @@ namespace snakeandladdergame
                     {
                         Console.WriteLine("won the game user1 ");
                     }
+                    else if (user1dicevalue >= 100)
+                    {
+                        user1dicevalue = user1dicevalue - Rolldice();
+                    }
+
 
 
                     user++;
@@ -98,6 +103,10 @@ namespace snakeandladdergame
                     if (user2dicevalue == 100)
                     {
                         Console.WriteLine("won the game user2 ");
+                    }
+                    else if (user1dicevalue >= 100)
+                    {
+                        user2dicevalue = user1dicevalue - Rolldice();
                     }
 
 
