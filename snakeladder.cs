@@ -19,6 +19,11 @@ namespace snakeandladdergame
 
             int user1dicevalue = 0; // user1 position 
 
+            int dicecount1 = 0;
+            int dicecount2 = 0;
+
+
+
             int Rolldice()
             {
                 Random random = new Random();
@@ -45,6 +50,9 @@ namespace snakeandladdergame
                     Console.WriteLine("press any key to roll the dice ");
 
                     user1dicevalue = Rolldice();
+                    dicecount1 += 1;
+
+                    Console.WriteLine("you are the position at" + user1dicevalue);
 
 
                     for (int i = 0; i <= snake.Length - 1; i++)
@@ -64,7 +72,8 @@ namespace snakeandladdergame
                     }
                     if (user1dicevalue == 100)
                     {
-                        Console.WriteLine("won the game user1 ");
+                        Console.WriteLine("you are at the position" + user1dicevalue + "won the game user1 rolling the dice " + dicecount1 + "times");
+
                     }
                     else if (user1dicevalue >= 100)
                     {
@@ -83,13 +92,18 @@ namespace snakeandladdergame
                     Console.WriteLine("press any key to roll the dice ");
 
                     user2dicevalue = Rolldice();
+                    dicecount2 += 1;
+
+                    Console.WriteLine("you are the position at" + user2dicevalue);
+
+
 
 
                     for (int i = 0; i <= snake.Length - 1; i++)
                     {
                         if (user2dicevalue == snake[i])
                         {
-                            user1dicevalue -= 10;
+                            user2dicevalue -= 10;
                         }
                     }
 
@@ -102,7 +116,8 @@ namespace snakeandladdergame
                     }
                     if (user2dicevalue == 100)
                     {
-                        Console.WriteLine("won the game user2 ");
+                        Console.WriteLine("you are  at position " + user2dicevalue + "won the game user1 rolling the dice " + dicecount2 + "times");
+
                     }
                     else if (user1dicevalue >= 100)
                     {
